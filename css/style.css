@@ -1,0 +1,113 @@
+/* Global Rules  */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+/* End global Rules  */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+.card {
+    position: relative;
+    width:320px;
+    height: 420px;
+    background: #123936;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width:100%;
+    height: 100%;
+    background: #ed2939;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+.card::after {
+    content: 'Beats';
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    font-size: 8.5em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255,255,0.04);;
+}
+.card .img-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+.card .img-box img {
+    max-width: 100%;
+    width: 300px;
+    transition: 0.5s;
+}
+.card:hover .img-box img {
+    max-width: 85%;
+}
+.card .content-bx {
+    position: relative;
+    /*padding: 20px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.card .content-bx h3 {
+    position: absolute;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight:500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    top: -20px;
+}
+.card .content-bx .price {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+.card .content-bx .buy{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 30px;
+    background: #ed2939;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.card:hover .content-bx .buy {
+    top: 0;
+    opacity: 1;
+}
