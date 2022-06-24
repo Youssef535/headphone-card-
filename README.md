@@ -1,2 +1,3 @@
 # headphone-card-
-hello guys this is a responsive headphone card you cand chnage the code do not copy it enjoy .
+### HTML5 CSS3 animation
+### As A front-End Developer i need to make sure that the user interface wroking smoothly 
